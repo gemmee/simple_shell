@@ -94,12 +94,13 @@ Your shell should:
 	- Handle errors.
 	- You have to handle the 'end of file' condition(`Ctrl+D`)
 
-You don't have to:
+  You don't have to:
+
 	- use the `PATH`
 	- implement built-ins
-	- handle special characters: `"`, `'`, ```, `*`, `&`, `#`
+	- handle special characters: `"`, `'`, `&#96;`, `*`, `&`, `#`
 	- be able to move the cursor
 	- handle command line arguments
 
-`execve` will be one of the core part of your Shell, don't forget to pass the environ to it
+  `execve` will be one of the core part of your Shell, don't forget to pass the environ to it
 
