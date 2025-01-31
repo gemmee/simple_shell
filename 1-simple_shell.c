@@ -2,7 +2,6 @@
 
 #define PROMPT "#cisfun$ "
 
-
 /**
  * main - Entry point of the shell program
  *
@@ -10,11 +9,11 @@
  */
 int main(void)
 {
-	InputBuffer input = {0, NULL};
 	int wstatus;
 	char *cmd;
 	ssize_t nread;
 	char *argv[2];
+	InputBuffer input = {0, NULL};
 
 	while (1)
 	{
@@ -37,7 +36,7 @@ int main(void)
 		{
 			argv[0] = cmd;
 			argv[1] = NULL;
-			execve(cmd, argv, NULL);
+			execve(cmd, argv, environ);
 			perror("./shell");
 			exit(1);
 		}

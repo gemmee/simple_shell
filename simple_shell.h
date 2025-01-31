@@ -8,6 +8,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+extern char **environ;
+
 /**
  * struct InputBuffer - structure to hold input buffer details
  * @len: length of the buffer
