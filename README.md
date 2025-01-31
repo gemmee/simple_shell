@@ -39,6 +39,6 @@ This project is an educational endeavor designed to solidify understanding of:
 ### **Installation**
 Clone the repository:
 ```bash
-git clone https://github.com/username/simple_shell.git
+git clone https://github.com/gemmee/simple_shell.git
 cd simple_shell
 
