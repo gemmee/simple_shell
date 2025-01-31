@@ -17,7 +17,9 @@ int main(void)
 
 	while (1)
 	{
-		display_prompt();
+		if (isatty(1))
+			display_prompt();
+
 		nread = getline(&input.buf, &input.len, stdin);
 
 		if (nread == -1)
