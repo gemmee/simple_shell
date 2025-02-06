@@ -17,7 +17,7 @@ int main(void)
 
 	while (1)
 	{
-		if (isatty(1))
+		if (isatty(STDIN_FILENO))
 			display_prompt();
 
 		nread = getline(&input.buf, &input.len, stdin);
@@ -29,7 +29,11 @@ int main(void)
 		}
 
 		input.buf[nread - 1] = '\0';
-		cmd = input.buf;
+		/* Trim spaces before processing */
+		cmd = strtok(input.buf, " \t\n");
+
+		if (!cmd)
+			continue;
 
 		if (strlen(cmd) == 0)
 			continue;
