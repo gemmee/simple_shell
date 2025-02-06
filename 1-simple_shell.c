@@ -29,8 +29,7 @@ int main(void)
 		}
 
 		input.buf[nread - 1] = '\0';
-		/* Trim spaces before processing */
-		cmd = strtok(input.buf, " \t\n");
+		cmd = input.buf;
 
 		if (!cmd)
 			continue;
