@@ -30,7 +30,11 @@ int main(void)
 
 		input.buf[nread - 1] = '\0';
 		cmd = input.buf;
-
+		
+		while (*cmd == ' ' || *cmd == '\t')
+		{
+			cmd++;
+		}
 		if (!cmd)
 			continue;
 
